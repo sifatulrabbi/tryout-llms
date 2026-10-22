@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tetris-tui"
+version = "1.0.0"
+description = "A polished, dependency-free Tetris game for the terminal"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+tetris = "tetris.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tetris"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
